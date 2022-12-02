@@ -1,2 +1,2 @@
-# -DZ_JS_Modul_05
+# DZ_JS_Modul_05
 ДЗ по JS Формы
