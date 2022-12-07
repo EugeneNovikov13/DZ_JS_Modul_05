@@ -31,7 +31,7 @@
     <input type="button" id="but" value="Next">
 </form>
 <script>
-    let Test = {
+    let test = {
         ques: [['How many letters are there in the word "World"?','4','5'],
                ['How many letters are there in the word "Answer"?','6','5']],
         rightAns: ['5','5','6'],
@@ -54,8 +54,8 @@
             this.but.addEventListener('click', this.clickFunc)
         },
         clickFunc () {
-            Test.answerAnalise();
-            Test.askQuestion()
+            test.answerAnalise();
+            test.askQuestion()
         },
         answerAnalise () {
             if (this.var1.checked === true) {
@@ -81,7 +81,7 @@
                                                                                (this.counter+1) + ' questions</p>';
         }
     }
-    Test.init();
+    test.init();
 </script>
 </body>
 </html>
