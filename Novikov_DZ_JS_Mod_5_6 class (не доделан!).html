@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-family: sans-serif Arial;
+        }
+        #form1 {
+            width: 910px;
+            background: rgb(180, 219, 232);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        #form1 select, #date {
+            width: 250px;
+            padding: 5px;
+            border: 1px solid grey;
+            border-radius: 3px;
+            margin-right: 20px;
+        }
+        #search, #book {
+            width: 200px;
+            padding: 5px;
+        }
+        #chooseSeats {
+            width: 910px;
+            background: rgb(180, 219, 232);
+            padding: 30px;
+        }
+        #waggon {
+            box-sizing: border-box;
+            width: 910px;
+            height: 150px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            margin-top: 40px;
+            padding: 30px 25px;
+        }
+        .coupe {
+            box-sizing: border-box;
+            width: 120px;
+            height: 90px;
+            float: left;
+            margin-right: 2px;
+            border: 2px solid grey;
+        }
+        .seats {
+            box-sizing: border-box;
+            width: 56px;
+            height: 40px;
+            border: 1px solid grey;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .top-left-place {
+            float: left;
+            background: #b4dbe8;
+        }
+        .top-right-place {
+            float: right;
+        }
+        .bottom-left-place {
+            clear: both;
+            margin-top: 6px;
+            float: left;
+        }
+        .bottom-right-place {
+            margin-top: 6px;
+            float: right;
+        }
+        #total {
+            text-align: right;
+        }
+        #price {
+            font-weight: bold;
+        }
+        #my_tickets {
+            width: 910px;
+            padding: 30px;
+            background: #b4dbe8;
+        }
+        #ticket_table {
+            border-collapse: collapse;
+            font-size: larger;
+        }
+        #ticket_table th, td {
+            border: 1px solid grey;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<form action="" id="form1">
+    <label for="direction">Direction:</label>
+    <select id="direction">
+        <option value="Voronezh - Moscow">Voronezh - Moscow</option>
+        <option value="Voronezh - Saint-Petersburg">Voronezh - Saint-Petersburg</option>
+        <option value="Voronezh - Sochi">Voronezh - Sochi</option>
+        <option value="Voronezh - Novosibirsk">Voronezh - Novosibirsk</option>
+    </select>
+    <label for="date">Date:</label>
+    <input type="date" id="date">
+    <input type="button" id="search" value="Search">
+</form>
+<div id="chooseSeats" hidden>
+    <hr>
+    <div id="waggon">
+        <div class="coupe">
+            <div class="seats top-left-place">
+                <input type="checkbox" id="seat1">
+                <label for="seat1">1</label>
+            </div>
+            <div class="seats top-right-place">
+                <input type="checkbox" id="seat3">
+                <label for="seat3">3</label>
+            </div>
+            <div class="seats bottom-left-place">
+                <input type="checkbox" id="seat2">
+                <label for="seat2">2</label>
+            </div>
+            <div class="seats bottom-right-place">
+                <input type="checkbox" id="seat4">
+                <label for="seat4">4</label>
+            </div>
+        </div>
+        <div class="coupe">
+            <div class="seats top-left-place">
+                <input type="checkbox" id="seat5">
+                <label for="seat5">5</label>
+            </div>
+            <div class="seats top-right-place">
+                <input type="checkbox" id="seat7">
+                <label for="seat7">7</label>
+            </div>
+            <div class="seats bottom-left-place">
+                <input type="checkbox" id="seat6">
+                <label for="seat6">6</label>
+            </div>
+            <div class="seats bottom-right-place">
+                <input type="checkbox" id="seat8">
+                <label for="seat8">8</label>
+            </div>
+        </div>
+        <div class="coupe">
+            <div class="seats top-left-place">
+                <input type="checkbox" id="seat9">
+                <label for="seat9">9</label>
+            </div>
+            <div class="seats top-right-place">
+                <input type="checkbox" id="seat11">
+                <label for="seat11">11</label>
+            </div>
+            <div class="seats bottom-left-place">
+                <input type="checkbox" id="seat10">
+                <label for="seat10">10</label>
+            </div>
+            <div class="seats bottom-right-place">
+                <input type="checkbox" id="seat12">
+                <label for="seat12">12</label>
+            </div>
+        </div>
+        <div class="coupe">
+            <div class="seats top-left-place">
+                <input type="checkbox" id="seat13">
+                <label for="seat13">13</label>
+            </div>
+            <div class="seats top-right-place">
+                <input type="checkbox" id="seat15">
+                <label for="seat15">15</label>
+            </div>
+            <div class="seats bottom-left-place">
+                <input type="checkbox" id="seat14">
+                <label for="seat14">14</label>
+            </div>
+            <div class="seats bottom-right-place">
+                <input type="checkbox" id="seat16">
+                <label for="seat16">16</label>
+            </div>
+        </div>
+        <div class="coupe">
+            <div class="seats top-left-place">
+                <input type="checkbox" id="seat17">
+                <label for="seat17">17</label>
+            </div>
+            <div class="seats top-right-place">
+                <input type="checkbox" id="seat19">
+                <label for="seat19">19</label>
+            </div>
+            <div class="seats bottom-left-place">
+                <input type="checkbox" id="seat18">
+                <label for="seat18">18</label>
+            </div>
+            <div class="seats bottom-right-place">
+                <input type="checkbox" id="seat20">
+                <label for="seat20">20</label>
+            </div>
+        </div>
+        <div class="coupe">
+            <div class="seats top-left-place">
+                <input type="checkbox" id="seat21">
+                <label for="seat21">21</label>
+            </div>
+            <div class="seats top-right-place">
+                <input type="checkbox" id="seat23">
+                <label for="seat23">23</label>
+            </div>
+            <div class="seats bottom-left-place">
+                <input type="checkbox" id="seat22">
+                <label for="seat22">22</label>
+            </div>
+            <div class="seats bottom-right-place">
+                <input type="checkbox" id="seat24">
+                <label for="seat24">24</label>
+            </div>
+        </div>
+        <div class="coupe">
+            <div class="seats top-left-place">
+                <input type="checkbox" id="seat25">
+                <label for="seat25">25</label>
+            </div>
+            <div class="seats top-right-place">
+                <input type="checkbox" id="seat27">
+                <label for="seat27">27</label>
+            </div>
+            <div class="seats bottom-left-place">
+                <input type="checkbox" id="seat26">
+                <label for="seat26">26</label>
+            </div>
+            <div class="seats bottom-right-place">
+                <input type="checkbox" id="seat28">
+                <label for="seat28">28</label>
+            </div>
+        </div>
+    </div>
+    <p id="total">Total price:<span id="price"></span> <input type="button" id="book" value="Book"></p>
+</div>
+<div id="my_tickets" hidden>
+    <h3>My tickets:</h3>
+    <table id="ticket_table">
+        <thead>
+            <th>Direction</th>
+            <th>Date</th>
+            <th>Seat</th>
+        </thead>
+        <tbody id="tickets">
+        </tbody>
+    </table>
+</div>
+<script>
+    class BookTrain {
+        constructor(pricelist) {
+            this.pricelist = pricelist;
+            this.bookingArr = [];
+            this.dir = document.getElementById('direction');
+            this.date = document.getElementById('date');
+            this.srch = document.getElementById('search');
+            this.cs = document.getElementById('chooseSeats');
+            this.seats = document.querySelectorAll('.seats');
+            this.book = document.getElementById('book');
+            this.tickets = document.getElementById('tickets');
+        }
+        initEventListener() {
+            console.log(this.seats)
+            this.srch.addEventListener('click', this.searchEventListener);
+            this.book.addEventListener('click', this.saveBooking);
+        }
+        searchEventListener() {
+            let newBooking = new BookTrain();
+            console.log(newBooking)
+            newBooking.checkSoldTickets();
+            newBooking.cs.removeAttribute('hidden');
+            newBooking.dir.setAttribute('disabled', 'true');
+            newBooking.date.setAttribute('disabled', 'true');
+            newBooking.bookSeats()
+        }
+        checkSoldTickets() {
+            this.bookingArr.forEach(function (elem, index, arr) {
+                if (elem[0] === this.dir.value && elem[1] === this.date.value) {
+
+                }
+            })
+        }
+        bookSeats() {
+
+        }
+        saveBooking() {
+            let newBooking = new BookTrain();
+            let choice = [];
+            choice.push(newBooking.dir.value, newBooking.date.value);
+            newBooking.seats.forEach(function(elem) {
+                if (elem.children[0].checked) choice.push(elem.children[1].innerHTML)
+            })
+            newBooking.bookingArr.push(choice);
+            console.log(newBooking.bookingArr)
+            newBooking.dir.setAttribute('disabled', 'false');
+            newBooking.date.setAttribute('disabled', 'false');
+        }
+    }
+    let prices = ['20$', '43$', '55$', '135$'];
+    let booking = new BookTrain(prices);
+    booking.initEventListener()
+</script>
+</body>
+</html>
