@@ -149,9 +149,10 @@
             console.log(this.soldTickets);                                                                  //для удобства контроля купленных на этот маршрут билетов
         },
         createSeatBlock() {                                                                                 //метод добавляет блок для выбора мест
-            if (document.getElementById('chooseSeats')) {                                                   //если существует элемент для одного маршрута, а нужен другой,
-                document.body.removeChild(document.body.lastChild);                                         //предварительно удаляем предыдущий маршрут
+            if (document.getElementById('chooseSeats') || document.getElementById('my_tickets')) {          //если создан другой блок после блока поиска, а нужен другой,
+                document.body.removeChild(document.body.lastChild);                                         //предварительно удаляем предыдущий блок
             }
+            this.counter = 0;                                                                               //сбрасываем счетчик выбранных мест
             let n = document.createElement('div');                                                          //создаем новый элемент HTML
             let str = '    <hr>\n' +
                 '    <div id="waggon">\n';
